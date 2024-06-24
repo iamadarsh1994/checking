@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        button {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background: darkgreen;
+}
+
+#increment-btn {
+    background: darkred;
+}
+
+#save-btn {
+    background: darkgreen;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1 id="counter">Counter :</h1>
+    <h2 id="count">0</h2>
+    <button id="Btn" onclick="">Increment</button>
+    <script>
+      let newCount = document.getElementById("count");
+      let addBtn = document.getElementById("Btn");
+
+      addBtn.addEventListener("click", function () {
+        // add 1 every time btn is clicked
+          let result = Number(newCount.innerText) +  1;
+          newCount.innerText = result;
+          console.log()
+      });
+
+      // function forCount(){
+      //     newCount = newCount + 1
+      //     return newCount
+      // }
+      //  console.log(forCount())
+    </script>
+  </body>
+</html>

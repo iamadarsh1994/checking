@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="startTime()">
+    <main>Clock</main>
+    <div id="clk"></div>
+    <hr><br>
+    <div>Timer : </div> 
+    <div id="timer">0</div>
+    <br>
+    <button id="startBtn">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+      function startTime() {
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById("clk").innerHTML = h + ":" + m + ":" + s;
+        setTimeout(startTime, 1000);
+      }
+      function checkTime(i) {
+        if (i < 10) {
+          i = "0" + i;
+        }
+        return i;
+      }
+      //timers
+      
+      let timers = document.getElementById('timer')
+      let start = document.getElementById('startBtn')
+      
+    </script>
+  </body>
+</html>
+<!-- how to make a timer in JS
+1. create a clock first
+2. then we will think about the timer 
+-->
